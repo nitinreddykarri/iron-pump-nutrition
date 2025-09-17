@@ -15,8 +15,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-            color: #fff;
+            background: linear-gradient(135deg, #f5f3f0 0%, #e8e4de 50%, #f5f3f0 100%);
+            color: #2c3e50;
             overflow-x: hidden;
             min-height: 100vh;
         }
@@ -37,7 +37,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.05;
+            opacity: 0.03;
             background-image: 
                 radial-gradient(circle at 25% 25%, #B8860B 0%, transparent 50%),
                 radial-gradient(circle at 75% 75%, #B8860B 0%, transparent 50%);
@@ -66,10 +66,11 @@
             align-items: center;
         }
 
-        .logo-svg {
-            width: clamp(300px, 50vw, 500px);
+        .logo-image {
+            width: clamp(300px, 60vw, 600px);
             height: auto;
             margin-bottom: 1rem;
+            filter: drop-shadow(0 4px 15px rgba(184, 134, 11, 0.2));
         }
 
         .logo-text {
@@ -119,7 +120,7 @@
             font-family: 'Inter', sans-serif;
             font-size: clamp(2rem, 5vw, 4rem);
             margin-bottom: 1.5rem;
-            color: #fff;
+            color: #2c3e50;
             font-weight: 800;
             letter-spacing: 0.05em;
         }
@@ -127,7 +128,7 @@
         .coming-soon p {
             font-family: 'Inter', sans-serif;
             font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            color: #ccc;
+            color: #5a6c7d;
             max-width: 700px;
             line-height: 1.6;
             margin: 0 auto;
@@ -163,12 +164,14 @@
             border-radius: 50px;
             border: 2px solid rgba(184, 134, 11, 0.3);
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .feature:hover {
             background: rgba(184, 134, 11, 0.2);
             transform: scale(1.05);
             border-color: rgba(184, 134, 11, 0.6);
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.15);
         }
 
         .feature-icon {
@@ -195,7 +198,7 @@
         .social-link {
             width: 55px;
             height: 55px;
-            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            background: rgba(255, 255, 255, 0.9);
             border: 2px solid #B8860B;
             border-radius: 50%;
             display: flex;
@@ -205,13 +208,14 @@
             text-decoration: none;
             font-size: 1.3rem;
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .social-link:hover {
             transform: translateY(-3px) rotate(360deg);
             box-shadow: 0 10px 25px rgba(184, 134, 11, 0.3);
-            background: linear-gradient(145deg, #B8860B, #9a7209);
-            color: #000;
+            background: #B8860B;
+            color: #fff;
         }
 
         .particles {
@@ -294,8 +298,8 @@
         }
 
         @media (max-width: 480px) {
-            .logo-svg {
-                width: clamp(250px, 80vw, 350px);
+            .logo-image {
+                width: clamp(250px, 85vw, 400px);
             }
         }
     </style>
@@ -308,24 +312,9 @@
         
         <div class="logo-section">
             <div class="logo">
-                <svg class="logo-svg" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
-                    <!-- I -->
-                    <path d="M20 20 L20 100 L50 100 L50 20 Z" fill="#B8860B" transform="skew(-15, 0)"/>
-                    
-                    <!-- P -->
-                    <path d="M70 20 L70 100 L100 100 L100 75 L130 75 Q145 75 145 60 L145 35 Q145 20 130 20 Z M100 35 L100 60 L125 60 L125 35 Z" fill="#B8860B" transform="skew(-15, 0)"/>
-                    
-                    <!-- Swoosh through P and N -->
-                    <rect x="90" y="52" width="220" height="8" fill="#B8860B" transform="skew(-10, 0)"/>
-                    
-                    <!-- N -->
-                    <path d="M170 20 L170 100 L200 100 L200 60 L230 100 L260 100 L260 20 L230 20 L230 60 L200 20 Z" fill="#B8860B" transform="skew(-15, 0)"/>
-                </svg>
-                
-                <div class="logo-text">
-                    <span class="iron-pump">IRON PUMP</span>
-                    <span class="nutrition">N U T R I T I O N</span>
-                </div>
+                <img src="logo.png"
+                     class="logo-image"
+                     style="background: url('https://via.placeholder.com/600x350/f5f3f0/B8860B?text=IPN+IRON+PUMP+NUTRITION') center/contain no-repeat;" />
             </div>
         </div>
         
